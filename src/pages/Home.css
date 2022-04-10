@@ -1,0 +1,21 @@
+
+.home {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home span {
+    font-weight: bold;
+    font-size: 25px;
+}
+.link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
