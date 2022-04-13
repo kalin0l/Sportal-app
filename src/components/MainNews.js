@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import data1 from "../data/data (1)";
 
 
@@ -21,8 +21,9 @@ const MainNews = () => {
     </div>
     <ul className="news-container">
       {data1.data.slice(0, 5).map((news, i) => {
-        return (
-          <li className="news" onMouseOver={() => displayNews(i)} key={i}>
+        return <React.Fragment  key={news.id}>
+
+         {news.image.data && news.image.data.urls && news.image.data.urls.uploaded.original && <li className="news" onMouseOver={() => displayNews(i)}>
             {news.image.data && news.image.data.urls && (
               <img
                 src={news.image.data.urls.uploaded.original}
@@ -30,8 +31,9 @@ const MainNews = () => {
                 alt="img"
               />
             )}
-          </li>
-        );
+          </li>}
+        </React.Fragment>
+        
       })}
     </ul>
   </div>

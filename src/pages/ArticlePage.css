@@ -12,6 +12,8 @@
     align-items: center;
     width: 40vw;
     margin-top: 5rem;
+    height: 100vh;
+    margin-top: 10rem;
 }
 img {
     height: 300px;

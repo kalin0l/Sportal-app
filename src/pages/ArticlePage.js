@@ -6,7 +6,6 @@ const ArticlePage = () => {
     const [article,setArticle] = useState([])
     useEffect(() => {
         const newArr = data.data.body.splice(2,1)
-        console.log(data.data.body);
         setArticle(data.data.body);
     },[])
     return <section className='article-section'>
@@ -17,7 +16,6 @@ const ArticlePage = () => {
             <div>
                 {article.map((content,i) => {
                     let temp = content.data.content.split("<p>")[1].split("</p>")[0].split("<strong>")[0].split("<br>");
-                    console.log(temp)
                     
                     return <p key={i}>{temp[0]}</p>
                 })}
